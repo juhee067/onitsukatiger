@@ -1,53 +1,64 @@
 import { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import Dropdown from './Dropdown';
 
 const NAVLINK = [
-    { id: 1, menu: "NEW", link: '/' },
-    { id: 2, menu: "MEXICO 66", link: '/' },
-    { id: 3, menu: "MEN", link: '/' },
-    { id: 4, menu: "WOMEN", link: '/' },
-    { id: 5, menu: "KIDS", link: '/' },
-    { id: 6, menu: "TIGER GALLERY", link: '/' },
+    { id: 1, menu: "NEW" },
+    { id: 2, menu: "MEXICO" },
+    { id: 3, menu: "MEN" },
+    { id: 4, menu: "WOMEN" },
+    { id: 5, menu: "KIDS" },
+    { id: 6, menu: "GALLERY" },
 ]
 
 
-const Header = () => {
-    
+const Header = props => {
+    const [dropdownVisibility, setDropdownVisibility] = React.useState(false);
     return (
         <header className="Header" >
             <div className="hd_wrap">
-                <div className='left'><h1>
-                    <a href="/" >
-                        onitsuka
-                    </a>
-                </h1>
-                <nav className="Gnb inner">
-                    <ul>
-                        {
-                            NAVLINK.map((it, idx) => {
-                                return (
-                                    <li key={it.id}>
-                                        <a href={it.link}>{it.menu}
-                                        <ul className="submenu">
+                <div className='left'>
+                    <h1>
+                        <a href="/" >
+                            onitsuka
+                            <img src={process.env.PUBLIC_URL + "/assets/images/logo.svg"} alt="" />
+                        </a>
+                    </h1>
+                    <nav className="Gnb inner">
+                        <ul id='app'>
+                            {
+                                NAVLINK.map((it, idx) => {
+                                    return (
+                                        <li key={it.id} onFocus={e => setDropdownVisibility(!dropdownVisibility)}>
+                                            <a href='/' >
+                                                {it.menu}
 
-                                        </ul>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </nav></div>
-                
+                                            </a>
+                                            <Dropdown className="submenu" visibility={dropdownVisibility}>
+                                                <ul>
+                                                    <li>item 1</li>
+                                                    <li>item 2</li>
+                                                    <li>item 3</li>
+                                                    <li>item 4</li>
+                                                </ul>
+                                            </Dropdown>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </nav></div>
+
                 <div className='top_search'>
-                <form action="#!">
-                                <input type="text" placeholder="검색" required />
-                                <button>
-                                    <i className="xi-search"></i>
-                                </button>
-                            </form>
+                    <form action="#!">
+                        <input type="text" placeholder="검색" required />
+                        <button>
+                            <i className="xi-search"></i>
+                        </button>
+                    </form>
 
                 </div>
-              
+
             </div>
         </header>
     )

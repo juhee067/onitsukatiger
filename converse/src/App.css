@@ -1,13 +1,18 @@
-/* * {outline: 1px solid} */
+/* * {
+  outline: 1px solid
+} */
+
 :root {
   --dc: #444444;
   --gc: #dddddd;
 }
+
 .Header {
-background-color: #fff;
-z-index: 999;
-border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #ddd;
 }
+
 .hd_wrap {
   position: relative;
   width: 100%;
@@ -16,24 +21,31 @@ border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   line-height: 100px;
-  
+
 }
 
-.hd_wrap .left{
-  display: flex;
+.hd_wrap #add {
+  flex: 1;
+  text-align: center;
 }
+
+.hd_wrap .left {
+  display: flex;
+  gap: 50px;
+}
+
 .Gnb ul {
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 .Header .hd_wrap h1 a {
   display: inline-block;
   font-size: 0;
-  width: 188px;
+  width: 60px;
   height: 22px;
-  background: url(../public/assets/images/logo.svg) no-repeat;
-  vertical-align: middle;
+  vertical-align: 10px;
+
 }
 
 .Header .top_search input[type="text"] {
@@ -56,7 +68,7 @@ border-bottom: 1px solid #ddd;
   height: calc(100vh - 240px);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% auto;
+
 }
 
 
@@ -78,9 +90,67 @@ border-bottom: 1px solid #ddd;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.MainVisual figure .inner .cbtn{
+
+.MainVisual figure .inner .cbtn {
   color: #000;
   background-color: #fff;
   padding: 5px 20px 7px 20px;
   font-size: 13px;
-cursor: pointer;}
+  cursor: pointer;
+}
+
+
+
+@keyframes slide-fade-in-dropdown-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-fade-in-dropdown {
+  overflow: hidden;
+}
+
+.slide-fade-in-dropdown>ul {
+  animation: slide-fade-in-dropdown-animation .4s ease;
+}
+
+@keyframes slide-fade-out-dropdown-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+.slide-fade-out-dropdown {
+  overflow: hidden;
+}
+
+.slide-fade-out-dropdown>ul {
+  animation: slide-fade-out-dropdown-animation 0.4s ease;
+  animation-fill-mode: forwards;
+
+}
+
+
+.components-dropdown>ul {
+
+  position: absolute;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  line-height: 20px;
+  background: #fff;
+}

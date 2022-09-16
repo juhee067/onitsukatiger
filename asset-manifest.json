@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/onitsukatiger/converse/public/index.html/static/css/main.4c0cfe32.css",
-    "main.js": "/onitsukatiger/converse/public/index.html/static/js/main.0224074f.js",
-    "static/media/main_visual01.jpeg": "/onitsukatiger/converse/public/index.html/static/media/main_visual01.07681964aca00dd96297.jpeg",
-    "static/media/main_visual02.jpeg": "/onitsukatiger/converse/public/index.html/static/media/main_visual02.78a5d5aab5cd26272a28.jpeg",
-    "static/media/main_visual03.jpeg": "/onitsukatiger/converse/public/index.html/static/media/main_visual03.d2b5178d518454a144f9.jpeg",
-    "index.html": "/onitsukatiger/converse/public/index.html/index.html",
-    "main.4c0cfe32.css.map": "/onitsukatiger/converse/public/index.html/static/css/main.4c0cfe32.css.map",
-    "main.0224074f.js.map": "/onitsukatiger/converse/public/index.html/static/js/main.0224074f.js.map"
+    "main.css": "/onitsukatiger/static/css/main.42d395ed.css",
+    "main.js": "/onitsukatiger/static/js/main.8481fe04.js",
+    "static/media/main_visual01.jpeg": "/onitsukatiger/static/media/main_visual01.07681964aca00dd96297.jpeg",
+    "static/media/main_visual02.jpeg": "/onitsukatiger/static/media/main_visual02.78a5d5aab5cd26272a28.jpeg",
+    "static/media/main_visual03.jpeg": "/onitsukatiger/static/media/main_visual03.d2b5178d518454a144f9.jpeg",
+    "index.html": "/onitsukatiger/index.html",
+    "main.42d395ed.css.map": "/onitsukatiger/static/css/main.42d395ed.css.map",
+    "main.8481fe04.js.map": "/onitsukatiger/static/js/main.8481fe04.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c0cfe32.css",
-    "static/js/main.0224074f.js"
+    "static/css/main.42d395ed.css",
+    "static/js/main.8481fe04.js"
   ]
 }
